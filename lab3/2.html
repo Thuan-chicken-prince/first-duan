@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse; /* Hợp nhất đường viền của các ô */
+            width: 80%;
+            margin-left: 10%;
+        }
+        th{
+            background-color: red;
+            color: aliceblue;
+        }
+        .hp{
+            color: red;
+        }
+
+        th, td {
+            border: 1px solid black; /* Đặt đường viền cho các ô */
+            padding: 8px; /* Đặt khoảng cách giữa nội dung và đường viền */
+            text-align: center; /* Căn giữa nội dung trong ô */
+        }
+        .mh{
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="color: red;text-align: center;">Chương trình học - ngàng lập trình</h1>
+    <table >
+        <tr>
+            <th rowspan="2">Nhóm học phần</th>
+            <th rowspan="2">Môn học</th>
+            <th colspan="2">Số tiết</th>
+        </tr>
+        <tr>
+            <th>Lý thuyết</th>
+            <th>Thực hành</th>
+        </tr>
+        <tr>
+            <td rowspan="6" class="hp">I <br> Tin học văn phòng</td>
+            <td class="mh">Hệ điều hành windows</td>
+            <td>3</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td class="mh">sử dụng internet</td>
+            <td>3</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td class="mh">Soạn thảo văn bản với MS Word</td>
+            <td>24</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td class="mh">Tạo bài trình diễn với MS PowerPoint</td>
+            <td>9</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td class="mh">Xử lý số liệu với MS Excel</td>
+            <td>24</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td class="mh">Tạo trang web với MS FrontPage</td>
+            <td>9</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="hp">II <br>Kỹ thuật lập trình(VB.NET)</td>
+            <td class="mh">Nhập môn lập trình</td>
+            <td>36</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td class="mh">Kỹ thuật lập trình</td>
+            <td>36</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td colspan="4" style="text-align: left;">...</td>
+        </tr>
+    </table>
+</body>
+</html>

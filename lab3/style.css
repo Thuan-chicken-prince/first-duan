@@ -1,0 +1,46 @@
+h1{
+    text-align: center;
+    border: 4px solid orange;
+    color: orange;
+}
+
+.first-p::first-letter{
+    font-size: 50px;
+    color: red;
+    font-family:serif ;
+    font-weight: bold;
+}
+.marquee-container {
+    width: 100%;
+    height: 50px;
+    background-color: orange; 
+    overflow: hidden; /* Ẩn nội dung vượt quá khung */
+    position: relative; /* Đặt vị trí tương đối cho con chữ */
+}
+
+.marquee-text {
+    position: absolute; /* Đặt vị trí tuyệt đối cho con chữ */
+    white-space: nowrap; /* Ngăn chữ xuống dòng */
+    animation: marquee 10s linear infinite; /* Áp dụng hiệu ứng chạy */
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@keyframes marquee {
+    0% { left: 100%; } /* Bắt đầu từ vị trí bên phải */
+    100% { left: -100%; } /* Di chuyển sang vị trí bên trái */
+}
+.second-p::first-letter{
+    font-family:serif ;
+    font-weight: bold;
+    color: red;
+    font-size: 50px;
+}
+.text-red{
+    color: red;
+    font-weight: bold;
+}
+.mark{
+    background-color: rgb(255, 170, 0);;
+}

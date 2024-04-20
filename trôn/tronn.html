@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        h1 {
+            text-align: center;
+            padding-top: 80px;
+            color: red;
+            font-size: 50px;
+        }
+        
+        body {
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 20px;
+        }
+        
+        .large-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 50px;
+            background-color: #f80a8d;
+            color: #ffffff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .large-button:hover {
+            background-color: #f404d0;
+        }
+        
+        .large-button a {
+            text-decoration: none;
+            color: inherit;
+            color: white;
+        }
+        
+        #no-button:hover {
+            animation: moveButton 1s infinite alternate;
+        }
+        
+        @keyframes moveButton {
+            0% {
+                transform: translate(0, 0);
+            }
+            
+            100% {
+                transform: translate(200px, 200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Nếu là bạn t thì nói thật đi <br> tóc t so với trước như thế nào🥺</h1>
+    <h2 id="subtitle">Nếu là bạn thì phải lựa chọn </h2>
+    <div id="content-image-container">
+        <img id="content-image" src="https://scr.vn/wp-content/uploads/2020/07/%E1%BA%A2nh-%C4%91%E1%BB%99ng-%C4%91%E1%BA%B7t-c%C3%A2u-h%E1%BB%8Fi-th%E1%BA%AFc-m%E1%BA%AFc.gif" alt="">
+    </div>
+    <button class="large-button" id="yes-button">nhìn xấu hoắc</button>
+    <button class="large-button" id="no-button">đẹp nghe</button>
+
+    <script>
+        var yesButton = document.getElementById('yes-button');
+        var title = document.getElementById('title');
+        var subtitle = document.getElementById('subtitle');
+        var contentImageContainer = document.getElementById('content-image-container');
+        
+        yesButton.addEventListener('click', function() {
+            title.textContent = "biết trước sẽ chọn cái này mà🥺";
+            subtitle.textContent = "hazz thất vọng quá đi";
+            
+            // Xóa các ảnh con khỏi container
+            var contentImages = contentImageContainer.getElementsByTagName('img');
+            while (contentImages.length > 1) {
+                contentImageContainer.removeChild(contentImages[contentImages.length - 1]);
+            }
+            
+            // Xóa thuộc tính src của ảnh còn lại
+            contentImages[0].src = "";
+            
+            document.getElementById('yes-button').style.display = 'none';
+            document.getElementById('no-button').style.display = 'none';
+            document.body.style.backgroundImage = "url('https://th.bing.com/th/id/OIP.RvhuY21L_6cdFE5Z4abqSAHaGY?rs=1&pid=ImgDetMain')";
+        });
+    </script>
+</body>
+</html>

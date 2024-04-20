@@ -1,0 +1,60 @@
+h1{
+    text-align: center;
+    padding-top: 80px;
+    color: red;
+    font-size: 50px;
+}
+body{
+    text-align: center;
+}
+h2{
+    font-size: 20px;
+}
+#movable-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+  .large-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    background-color: #f80a8d;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .large-button:hover {
+    background-color: #f404d0;
+  }
+  
+  .large-button a {
+    text-decoration: none;
+    color: inherit;
+    color: white;
+  }
+  
+  #no-button:hover {
+    animation: moveButton 1.2s infinite alternate;
+  }
+  
+  @keyframes moveButton {
+    0% {
+      transform: translate(0, 0);
+    }
+    
+    100% {
+      transform: translate(200px, 200px);
+    }
+  }

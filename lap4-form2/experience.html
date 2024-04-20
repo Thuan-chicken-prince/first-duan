@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exprience</title>
+    <!-- <style>
+        body{
+            width: 60%;
+            height: auto;
+            margin: auto auto;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            margin: auto auto;
+        }
+        .header p{
+            color: blue;
+            border-left: 5px solid blue;
+            padding-left: 10px;
+            font-size: 25px;
+        }
+        .header span{
+            font-size: 20px;
+            font-style: italic;
+        }
+        .header #rut-gon {
+            height: 22px;
+            margin-top: 30px;
+        }
+    </style> -->
+    <style>
+        body {
+            width: 60%;
+            height: auto;
+            margin: 50px auto;
+            font-family: Arial, sans-serif;
+        }
+    
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+    
+        .header .title {
+            color: blue;
+            border-left: 5px solid blue;
+            padding-left: 10px;
+            font-size: 25px;
+        }
+    
+        .header span {
+            font-size: 20px;
+            font-style: italic;
+        }
+    
+        .header #rut-gon {
+            height: 30px;
+        }
+    
+        .note {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+    
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    
+        table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+    
+        select {
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+    
+        .button {
+            margin-top: 30px;
+            text-align: center;
+        }
+    
+        .button button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }
+    
+        .button button:first-child {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <p class="title">Kinh nghiệm làm việc (<span>bắt buộc</span>)</p>
+        <select name="" id="rut-gon" aria-placeholder="">
+            <option value="">Rút gọn</option>
+        </select>
+    </div>
+    <div>
+        <p class="note">Hãy liệt kê những công việc, nhiệm vụ mà bạn đã từ đảm nhận và thực hiện. 
+            Chú ý liệt kê kinh nghiệm làm việc từ thời gian gần đây nhất trở về trước</p>
+    </div>
+    <div class="content">
+        <table>
+            <tr>
+                <td>Công ty <span>*</span></td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>Chức danh <span>*</span></td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>Thời gian làm việc <span>*</span></td>
+                <td>
+                    từ
+                    <select id="monthSelectFrom">
+                        <option value="">Tháng</option>
+                    </select>
+                
+                    <script>
+                        const monthSelectFrom = document.getElementById('monthSelectFrom');
+                
+                        // Tạo các tùy chọn từ 1 đến 31 và thêm chúng vào select box
+                        for (let i = 1; i <= 12; i++) {
+                            const option = document.createElement('option');
+                            option.value = i;
+                            option.text = i;
+                            monthSelectFrom.appendChild(option);
+                        }
+                    </script>
+                    <select id="yearSelectFrom">
+                        <option value="">Năm</option>
+                    </select>
+                
+                    <script>
+                        const yearSelectFrom = document.getElementById('yearSelectFrom');
+                
+                        // Tạo các tùy chọn từ 1 đến 31 và thêm chúng vào select box
+                        for (let i =2005; i <= 2024; i++) {
+                            const option = document.createElement('option');
+                            option.value = i;
+                            option.text = i;
+                            yearSelectFrom.appendChild(option);
+                        }
+                    </script>
+                    đến
+                    <select id="monthSelectTo">
+                        <option value="">Tháng</option>
+                    </select>
+                
+                    <script>
+                        const monthSelectTo = document.getElementById('monthSelectTo');
+                
+                        // Tạo các tùy chọn từ 1 đến 31 và thêm chúng vào select box
+                        for (let i = 1; i <= 12; i++) {
+                            const option = document.createElement('option');
+                            option.value = i;
+                            option.text = i;
+                            monthSelectTo.appendChild(option);
+                        }
+                    </script>
+                    <select id="yearSelectTo">
+                        <option value="">Năm</option>
+                    </select>
+                
+                    <script>
+                        const yearSelectTo = document.getElementById('yearSelectTo');
+                
+                        // Tạo các tùy chọn từ 1 đến 31 và thêm chúng vào select box
+                        for (let i = 2005; i <= 2024; i++) {
+                            const option = document.createElement('option');
+                            option.value = i;
+                            option.text = i;
+                            yearSelectTo.appendChild(option);
+                        }
+                    </script>
+                </td>
+            </tr>    
+            <tr>
+                <td>Mức lương</td>
+                <td>
+                    <select name="" id="">
+                        <option value="">VND</option>
+                        <option value="">USD</option>
+                    </select>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>Mô tả công việc <span>*</span></td>
+                <td>
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Thành tích đạt được</td>
+                <td>
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="button">
+        <button>Lưu</button>
+        <Button>Không lưu</Button>
+    </div>
+</body>
+</html>

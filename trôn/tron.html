@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        h1{
+    text-align: center;
+    padding-top: 80px;
+    color: red;
+    font-size: 50px;
+}
+body{
+    text-align: center;
+}
+h2{
+    font-size: 20px;
+}
+#movable-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+  }
+  .large-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    background-color: #f80a8d;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .large-button:hover {
+    background-color: #f404d0;
+  }
+  
+  .large-button a {
+    text-decoration: none;
+    color: inherit;
+    color: white;
+  }
+  
+  #no-button:hover {
+    animation: moveButton 1s infinite alternate;
+  }
+  
+  @keyframes moveButton {
+    0% {
+      transform: translate(0, 0);
+    }
+    
+    100% {
+      transform: translate(200px, 200px);
+    }
+  }
+    </style>
+    
+</head>
+<body>
+    <h1 id="title">Em còn iu anh nữaa hông 👉👈</h1>
+    <h2 id="subtitle">Nếu emm không chọn hoặc thoát là emm ghét anhhh</h2>
+    <img id="content-image" src="https://scr.vn/wp-content/uploads/2020/07/%E1%BA%A2nh-%C4%91%E1%BB%99ng-%C4%91%E1%BA%B7t-c%C3%A2u-h%E1%BB%8Fi-th%E1%BA%AFc-m%E1%BA%AFc.gif" alt="">
+    <button class="large-button" id="yes-button">Hông iu nữaaa >:</button>
+    <button class="large-button" id="no-button">Iu rất nhìu <3</button>
+
+    <script>
+        var yesButton = document.getElementById('yes-button');
+        var title = document.getElementById('title');
+        var subtitle = document.getElementById('subtitle');
+        var contentImage = document.getElementById('content-image');
+        
+        yesButton.addEventListener('click', function() {
+            title.textContent = "emm đúng là đồ tòyyyyyyy 🥺";
+            subtitle.textContent = "dỗiiii x10000000";
+            contentImage.src = ""; // Xóa ảnh của nội dung trước
+            document.getElementById('yes-button').style.display = 'none';
+            document.getElementById('no-button').style.display = 'none';
+            document.body.style.backgroundImage = "url('https://th.bing.com/th/id/OIP.RvhuY21L_6cdFE5Z4abqSAHaGY?rs=1&pid=ImgDetMain')";
+        });
+    </script>
+</body>
+</html>

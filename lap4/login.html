@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <style>
+      .container {
+        text-align: center;
+        width: 40vw;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .input-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .input-container input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 15px;
+      }
+
+      .register-button,
+      .login-button {
+        padding: 10px 20px;
+        width: 100%;
+        margin-top: 10px;
+        border: none;
+        cursor: pointer;
+      }
+      .register-button:hover,
+      .login-button:hover{
+        opacity: 0.5;
+      }
+
+      .register-button {
+        background-color: #000000;
+        color: white;
+      }
+
+      .login-button {
+        background-color: #ff0505;
+        color: white;
+      }
+
+      .or-opt {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      .or-opt hr {
+        flex-grow: 1;
+        height: 0.5px;
+        background-color: #858585;
+        margin: 0 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Đăng Nhập</h2>
+      <div class="input-container">
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Tài khoản Garena, Email hoặc Số điện thoại"
+        />
+      </div>
+      <div class="input-container">
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Mật khẩu"
+        />
+      </div>
+      <button class="register-button">Đăng ký ngay</button>
+      <div class="or-opt">
+        <hr />
+        <span>hoặc</span>
+        <hr />
+      </div>
+      <button class="login-button">Đăng nhập</button>
+    </div>
+  </body>
+</html>

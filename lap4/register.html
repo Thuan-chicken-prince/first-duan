@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .register {
+            border: 2px solid gray;
+            padding: 20px;
+            width: 50%;
+            margin: 50px auto;
+        }
+        .title {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .form {
+            width: 60%;
+            margin: auto;
+        }
+        .form input {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid rgb(184, 184, 184);
+        }
+        .form .ghichu {
+            font-size: 12px;
+            color: gray;
+            text-align: left;
+            margin-top: 5px;
+        }
+        .form select {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid rgb(184, 184, 184);
+        }
+        .option {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Chỉnh giữa nội dung option */
+            font-size: 12px;
+            margin-top: 10px; /* Đặt khoảng cách trên */
+        }
+        .btDki {
+            background-color: red;
+            color: aliceblue;
+            width: 40%;
+            height: 34px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .thoathuan {
+            margin-left: 5px;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="register">
+        <div class="title">
+            <span>Đăng kí</span>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Tên truy cập">
+            <input type="password" placeholder="Mật khẩu">
+            <input type="password" placeholder="Nhập lại mật khẩu">
+            <input type="email" placeholder="Email">
+            <p class="ghichu">Bạn cần sử dụng email này trong trường hợp cần đặt lại mật khẩu.</p>
+            <select name="country">
+                <option value="vn">Viet Nam (Việt Nam)</option>
+                <option value="kr">Hàn quốc (Hàn Quốc)</option>
+            </select>
+        </div>
+        <div class="option">
+            <input type="checkbox">
+            <p class="thoathuan">Tôi đồng ý với <span>Điều khoản Dịch vụ</span> và <span>Chính sách bảo mật</span></p>
+        </div>
+        <div>
+            <button class="btDki">Đăng kí ngay</button>
+        </div>
+    </div>
+</body>
+</html>

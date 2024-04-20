@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.header {
+    background-color: #a6f1fe;
+    padding: 5px;
+    text-align: center;
+}
+
+.content-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content-table td {
+    border: 5px solid #ce5757;
+    padding: 18px;
+}
+
+.content-table tr:first-child {
+    font-weight: bold;
+    background-color: #ce5757;
+}
+
+.content-table td[colspan="2"] {
+    text-align: left;
+}
+
+.content-table td[rowspan="3"] {
+    background-color: #6de9f0;
+    padding: 10px;
+}
+
+.footer {
+    background-color: #06fc3b;
+    padding: 10px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <p>header</p>
+    </div>
+    <div class="content">
+        <table class="content-table">
+            <tr>
+                <td colspan="2">content</td>
+            </tr>
+            <tr>
+                <td>entry</td>
+                <td rowspan="3">sidebar</td>
+            </tr>
+            <tr>
+                <td>entry</td>
+            </tr>
+            <tr>
+                <td>entry</td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        <p>footer</p>
+    </div>
+</body>
+</html>
